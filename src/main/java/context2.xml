@@ -1,0 +1,72 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+         http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-4.0.xsd
+         http://www.springframework.org/schema/tx
+         http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+         
+         <bean name="airtel1" class="com.springcore.thee.Airtel">    
+          </bean>
+         
+         <bean name="jio1" class="com.springcore.thee.Jio">
+         <property name="data">
+         <value>7549</value>
+         
+         
+         </property>
+         <property name="name" value="pritam" />
+         
+         <property name="fullName">
+         
+         <list>
+         <value>priyanka</value>
+          <value>raja</value>
+         
+         </list>
+         </property>
+         <property name="rollNo">
+         <set>
+         <value>1234
+         </value>
+         <value>1234</value>
+          <value>9934</value>
+         
+         </set>
+         </property>
+         
+         <property name="sub">
+       <map>
+       <entry key="patna"  value="bihar"></entry>
+       <entry key="ranchi"  value="jharkhand"></entry>
+       <entry key="lucknow"  value="utter pradesh"></entry>
+       
+       
+       
+       </map>
+         
+         </property>
+         	<!-- Reference Object  -->
+		<property name="subscription">
+		<ref bean="subss"/>
+		</property>
+        
+        
+         
+         </bean>
+         
+         <bean name="subss"
+		class="com.springcore.thee.Subscription">
+		<property name="name">
+		<value>xyz</value>
+		</property>
+	</bean>
+         
+         </beans>
